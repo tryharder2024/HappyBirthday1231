@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>生日快乐！</title>
+  
+  <!-- 音频资源 -->
+  <audio id="launchSound" src="../music/launch.mp3" preload="auto" muted></audio>
+  <audio id="bgMusic" src="../music/explosion.mp3" preload="auto" loop autoplay muted></audio>
+  
+  <!-- 样式和脚本 -->
+  <link rel="stylesheet" href="../css/firework.css">
+</head>
+
+<body>
+  <div id="autoPlayHint">点击任意处开始播放音乐</div>
+  <canvas></canvas>
+  <canvas></canvas>
+  <canvas></canvas>
+  
+  <!-- 按顺序加载脚本 -->
+  <script>
+      // 创建全局命名空间
+      window.FireworkApp = {
+          fontSize: 200,
+          rockets: [],
+          shards: [],
+          targets: [],
+          fidelity: 3,
+          counter: 0,
+          textAlpha: 0,
+          textVisible: false,
+          visiblePoints: [],
+          textPoints: [],
+          textWidth: 99999999
+      };
+  </script>
+  <script src="../js/init.js"></script>
+  <script src="../js/firework.js"></script>
+  <script src="../js/audio.js"></script>
+</body>
+
+</html>
